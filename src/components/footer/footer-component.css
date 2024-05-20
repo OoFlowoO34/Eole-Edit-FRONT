@@ -1,0 +1,23 @@
+
+footer p,
+footer a {
+  font-size: 0.8rem; 
+}
+
+footer .copyright {
+  font-size: 0.7rem; 
+}
+
+footer p{
+    margin-bottom: 0px;
+}
+
+footer a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+footer h5{
+    font-size: 1rem;
+    margin-top: 8px;
+}

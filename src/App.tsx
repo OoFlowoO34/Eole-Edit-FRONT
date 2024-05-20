@@ -1,22 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import UploadFormComponent from './components/upload-form-component';
+import React from 'react';
+
+import NavbarComponent from './components/navbar/navbar-component';
+import VideoComponent from './components/video/video-component';
+import FooterComponent from './components/footer/footer-component';
+import { Container } from 'react-bootstrap';
+
+import { VideoProvider } from './contexts/VideoContext';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App d-flex flex-column" style={{ minHeight: '100vh' }}>
       <header>
-        {/* Éléments du header */}
+        <NavbarComponent />
       </header>
-      <main className="App-header">
-          {/* Contenu de l'application */}
-        <UploadFormComponent/>
+      <main className="flex-grow-1">
+        <VideoProvider>
+          <VideoComponent />
+        </VideoProvider>
       </main>
-      <footer>
-        {/* Éléments de pied de page */}
+      <footer className="bg-dark mt-4">
+        <Container>
+          <FooterComponent />
+        </Container>
       </footer>
-
     </div>
   );
 }
