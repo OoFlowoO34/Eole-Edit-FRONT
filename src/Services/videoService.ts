@@ -1,4 +1,3 @@
-import { Console } from 'console';
 import Config from '../config';
 import VideoInfos from '../interfaces/VideoInfos';
 
